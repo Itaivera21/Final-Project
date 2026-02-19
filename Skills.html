@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <style>
+        body {
+            background-image: url("Images/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #skills {
+            font-size: 30px;
+            color: #0a3d62;
+            display: block;
+            text-align: center;
+            margin: 30px 0;
+        }
+        #skills:hover {
+            color: coral;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap; /* allows stacking on smaller screens */
+            padding: 20px;
+        }
+        .division {
+            width: 350px;
+            border-radius: 20px;
+            padding: 15px;
+            text-align: center;
+            background: rgba(255,255,255,0.6); /* subtle background for readability */
+        }
+        .division:hover {
+            backdrop-filter: blur(15px);
+            border-style: solid;
+            border-color: #0a3d62;
+        }
+        h3 {
+            color: #0a3d62;
+        }
+        ul {
+            text-align: left;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        img {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <span id="skills">Skills</span>
+
+    <div class="container">
+        <div class="division">
+            <img src="Icons/developer.png" style="height: 40px;width: 40px;">
+            <h3>Technical Skills</h3>
+            <h4>Programming languages</h4>
+            <ul>
+                <li>Java (Familiar): Object-oriented concepts and basic application development</li>
+                <li>HTML/CSS (Familiar): Building responsive web pages and this portfolio site</li>
+                <li>Python (Beginner): A versatile language I'm adding to my skill set</li>
+            </ul>
+            <img src="Icons/java.png" style="height: 40px;width: 40px;">
+            <img src="Icons/html-5.png" style="height: 40px;width: 40px;">
+            <img src="Icons/python.png" style="height: 40px;width: 40px;">
+        </div>
+
+        <div class="division">
+            <img src="Icons/responsive-design.png" style="height: 40px;width: 40px;">
+            <h3>Tools & Platforms</h3>
+            <ul>
+                <li>Git & Github: Version control; comfortable with branching, merging, and collaborative workflows</li>
+                <li>MySQL (Familiar): Designed and queried databases for university assignments</li>
+                <li>Visual Studio Code: Primary code editor with extensions for efficient development</li>
+            </ul>
+            <img src="Icons/github-sign.png" style="height: 40px;width: 40px;">
+            <img src="Icons/mysql.png" style="height: 40px;width: 40px;">
+            <img src="Icons/visual-studio.png" style="height: 40px;width: 40px;">
+        </div>
+
+        <div class="division">
+            <img src="Icons/skills.png" style="height: 40px;width: 40px;">
+            <h3>Soft Skills</h3>
+            <ul>
+                <li>Collaborative problem solving: Worked effectively in team projects to debug code and find solutions</li>
+                <li>Adaptive Learning: Quickly mastered new tools and frameworks for different course requirements</li>
+                <li>Technical Communication: Able to explain technical concepts to non-technical classmates</li>
+                <li>Time Management: Balanced multiple programming projects and coursework deadlines successfully</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

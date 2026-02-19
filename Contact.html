@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            background-image: url("Images/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        
+        .contact-container {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 400px;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-top: 0;
+            color: #333;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: bold;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        .btn {
+            background-color: #0a3d62;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: coral;
+        }
+        
+        .social-section {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        a:hover img {
+            filter: brightness(0) saturate(100%) invert(55%) sepia(63%) saturate(1312%) hue-rotate(325deg) brightness(101%) contrast(97%);
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h2>Contact Me</h2>
+        
+        <form action="contact.php" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Itai Vera" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="robert@gmail.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        
+        <div class="social-section">
+            <span>Follow me on</span>
+            <div class="social-links">
+                <a href="#"><img src="Icons/facebook.png" alt="Facebook" style="height:25px;width: 25px;"></a>
+                <a href="#"><img src="Icons/instagram.png" alt="Instagram" style="height:25px;width: 25px;"></a>
+                <a href="#"><img src="Icons/whatsapp.png" alt="WhatsApp" style="height:25px;width: 25px;"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
