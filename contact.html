@@ -12,12 +12,42 @@
             background-repeat: no-repeat;
             min-height: 100vh;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             font-family: Arial, sans-serif;
         }
-        
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            background: rgba(255,255,255,0.8);
+        }
+
+        header span {
+            color: orangered;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .navigationBar {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .navigationBar a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #0A1F44;
+            transition: color 0.3s ease;
+        }
+
+        .navigationBar a:hover {
+            color: orangered;
+        }
+
         .contact-container {
             background-color: rgba(255, 255, 255, 0.85);
             padding: 30px;
@@ -25,25 +55,26 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
             width: 90%;
             max-width: 400px;
+            margin: 40px auto;
         }
-        
+
         h2 {
             text-align: center;
             margin-top: 0;
             color: #333;
         }
-        
+
         .form-group {
             margin-bottom: 20px;
         }
-        
+
         label {
             display: block;
             margin-bottom: 5px;
             color: #555;
             font-weight: bold;
         }
-        
+
         input, textarea {
             width: 100%;
             padding: 12px;
@@ -52,12 +83,12 @@
             box-sizing: border-box;
             font-size: 16px;
         }
-        
+
         textarea {
             height: 120px;
             resize: vertical;
         }
-        
+
         .btn {
             background-color: #0a3d62;
             color: white;
@@ -69,39 +100,115 @@
             width: 100%;
             transition: background-color 0.3s;
         }
-        
+
         .btn:hover {
             background-color: coral;
         }
-        
+
         .social-section {
             text-align: center;
             margin-top: 25px;
             padding-top: 20px;
             border-top: 1px solid #eee;
         }
-        
+
         .social-links {
             display: flex;
             justify-content: center;
             gap: 15px;
             margin-top: 10px;
         }
-        
+
         a {
             text-decoration: none;
         }
-        
+
         a:hover img {
             filter: brightness(0) saturate(100%) invert(55%) sepia(63%) saturate(1312%) hue-rotate(325deg) brightness(101%) contrast(97%);
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header span {
+                font-size: 26px;
+            }
+
+            .navigationBar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .contact-container {
+                width: 95%;
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            input, textarea {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header span {
+                font-size: 22px;
+            }
+
+            .navigationBar a {
+                font-size: 16px;
+            }
+
+            .contact-container {
+                width: 100%;
+                border-radius: 0;
+                box-shadow: none;
+                margin: 20px auto;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            input, textarea {
+                font-size: 13px;
+            }
+
+            .btn {
+                font-size: 13px;
+                padding: 8px;
+            }
+
+            .social-links img {
+                height: 20px;
+                width: 20px;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <span>Itai Vera</span>
+        <nav class="navigationBar">
+            <div class="box"><a href="index.html">Home</a></div>
+            <div class="box"><a href="about.html">About</a></div>
+            <div class="box"><a href="skills.html">Skills</a></div>
+            <div class="box"><a href="projects.html">Projects</a></div>
+            <div class="box"><a href="contact.html">Contact</a></div>  
+        </nav>
+    </header>
+
     <div class="contact-container">
         <h2>Contact Me</h2>
-        
-        <form action="contact.php" method="POST">
+        <form action="https://formspree.io/f/mreaopol" method="POST">
             <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" placeholder="Itai Vera" required>
@@ -109,7 +216,7 @@
             
             <div class="form-group">
                 <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="robert@gmail.com" required>
+                <input type="email" id="email" name="email" placeholder="itaivera21@gmail.com" required>
             </div>
             
             <div class="form-group">
@@ -123,9 +230,9 @@
         <div class="social-section">
             <span>Follow me on</span>
             <div class="social-links">
-                <a href="#"><img src="Icons/facebook.png" alt="Facebook" style="height:25px;width: 25px;"></a>
-                <a href="#"><img src="Icons/instagram.png" alt="Instagram" style="height:25px;width: 25px;"></a>
-                <a href="#"><img src="Icons/whatsapp.png" alt="WhatsApp" style="height:25px;width: 25px;"></a>
+                <a href="#"><img src="Icons/facebook.png" alt="Facebook" style="height:25px;width:25px;"></a>
+                <a href="#"><img src="Icons/instagram.png" alt="Instagram" style="height:25px;width:25px;"></a>
+                <a href="#"><img src="Icons/whatsapp.png" alt="WhatsApp" style="height:25px;width:25px;"></a>
             </div>
         </div>
     </div>
