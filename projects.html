@@ -6,47 +6,147 @@
     <title>Projects | Welcome</title>
     <style>
         body {
-        background-image: url("Images/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin: 0;                      
-        font-family: Arial, sans-serif;
+            background-image: url("Images/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;                      
+            font-family: Arial, sans-serif;
         }
-        
+
         header {
-            text-align: center;
-            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between; /* name left, nav right */
+            align-items: center;
+            padding: 20px;
         }
+
+        header span {
+            color: orangered;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        .navigationBar {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navigationBar a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #0A1F44;
+            transition: color 0.3s ease;
+        }
+
+        .navigationBar a:hover {
+            color: orangered;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #0a3d62;
+        }
+
         .container {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             justify-content: center;
+            padding: 20px;
         }
+
         section {
             max-width: 400px;
-            background: white;
+            background: rgba(255,255,255,0.9);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
+
         h3 {
             color: #0a3d62;
             margin-bottom: 10px;
         }
+
         h3 span {
             border-bottom: 2px solid #0a3d62;
         }
+
         p {
             line-height: 1.6;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navigationBar {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            header span {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            section {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header span {
+                font-size: 24px;
+            }
+
+            .navigationBar a {
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+
+            section {
+                max-width: 100%;
+                padding: 15px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            p {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>My Projects</h1>
+        <span>Itai Vera</span>
+        <nav class="navigationBar">
+            <div class="box"><a href="index.html">Home</a></div>
+            <div class="box"><a href="about.html">About</a></div>
+            <div class="box"><a href="skills.html">Skills</a></div>
+            <div class="box"><a href="projects.html">Projects</a></div>
+            <div class="box"><a href="contact.html">Contact</a></div>  
+        </nav>
     </header>
+
+    <h1>My Projects</h1>
+
     <div class="container">
         <section class="intro">
             <h3><span>1. Introduction</span></h3>
