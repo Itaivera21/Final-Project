@@ -14,6 +14,38 @@
             margin: 0;
             padding: 0;
         }
+
+        header {
+            display: flex;
+            flex-direction: column; /* stack name and nav vertically */
+            align-items: center;    /* center them horizontally */
+            padding: 20px;
+        }
+
+        header span {
+            color: orangered;
+            font-size: 36px; /* larger name */
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .navigationBar {
+            display: flex;
+            gap: 20px;
+            justify-content: center; /* center nav links */
+        }
+
+        .navigationBar a {
+            text-decoration: none;
+            font-size: 20px;
+            color: #0A1F44;
+            transition: color 0.3s ease;
+        }
+
+        .navigationBar a:hover {
+            color: orangered;
+        }
+
         #skills {
             font-size: 30px;
             color: #0a3d62;
@@ -21,9 +53,11 @@
             text-align: center;
             margin: 30px 0;
         }
+
         #skills:hover {
             color: coral;
         }
+
         .container {
             display: flex;
             justify-content: center;
@@ -31,6 +65,7 @@
             flex-wrap: wrap; /* allows stacking on smaller screens */
             padding: 20px;
         }
+
         .division {
             width: 350px;
             border-radius: 20px;
@@ -38,28 +73,102 @@
             text-align: center;
             background: rgba(255,255,255,0.6); /* subtle background for readability */
         }
+
         .division:hover {
             backdrop-filter: blur(15px);
             border-style: solid;
             border-color: #0a3d62;
         }
+
         h3 {
             color: #0a3d62;
         }
+
         ul {
             text-align: left;
             padding-left: 20px;
         }
+
         ul li {
             margin-bottom: 10px;
         }
+
         img {
             margin: 5px;
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            .navigationBar {
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 10px;
+            }
+
+            #skills {
+                font-size: 24px;
+                margin: 20px 0;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .division {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+
+            .division h3 {
+                font-size: 22px;
+            }
+
+            .division ul li {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header span {
+                font-size: 28px;
+            }
+
+            .navigationBar a {
+                font-size: 16px;
+            }
+
+            #skills {
+                font-size: 20px;
+            }
+
+            .division {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .division h3 {
+                font-size: 18px;
+            }
+
+            .division ul li {
+                font-size: 13px;
+            }
         }
     </style>
 </head>
 <body>
     <span id="skills">Skills</span>
+    <header>
+        <span>Itai Vera</span>
+        <nav class="navigationBar">
+            <div class="box"><a href="index.html">Home</a></div>
+            <div class="box"><a href="about.html">About</a></div>
+            <div class="box"><a href="skills.html">Skills</a></div>
+            <div class="box"><a href="projects.html">Projects</a></div>
+            <div class="box"><a href="contact.html">Contact</a></div>  
+        </nav>
+    </header>
 
     <div class="container">
         <div class="division">
