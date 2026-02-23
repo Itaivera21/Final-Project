@@ -1,144 +1,293 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>About</title>
-    </head>
-    <body>
-        <section class="aboutMe">
-            <h3>1.<u>Introduction</u></h3>
-            <p>
-                My name is Itai Vera, and I am a second-year Information 
-                Technology student at Lupane State University, Matebeleland
-                North Zimbabwe, I am passionate about technology and its 
-                potential to transform lives and drive national development.
-            </p>
-        </section>
-        <section class="myJourney">
-            <h3>2.<u>Background & Journey</u></h3>
-            <p>
-                My journey into IT began with a curiosity about how systems 
-                work and how digital solutions can solve everyday problems.
-                Over time, I’ve developed skills in programming, networking,
-                and system design, and I continue to explore new technologies
-                to expand my knowledge.
-            </p>
-        </section><
-        <section class="skills">
-            <h3>3.<u>Skills & strengths</u></h3>
-            <h4>a)Technical Skills</h4>
-            <ul>
-                <li>
-                    <div class="box">
-                        <img src="Icons/java.png" class="divIcons">Java(Familiar):
-                         Object-oriented concepts and basic application development
-                    </div>
-                </li>
-                <hr>
-                <li>
-                    <div class="box">
-                        <img src="Icons/python.png" class="divIcons">Python(Beginner):
-                         A new versatile language that I'm adding to my skills set
-                    </div>
-                </li>
-                <hr>
-                <li>
-                    <div class="box">
-                        <img src="Icons/html-5.png" class="divIcons">HTML/CSS(Familiar):
-                         Building responsive webpages and this portfolio
-                    </div>
-                </li>
-                <hr>
-                <li>
-                    <div class="box">
-                        <img src="Icons/mysql.png" class="divIcons">MySQL(Familiar): 
-                        Designed and queried databases for university assignments
-                    </div>
-                </li>
-                <hr>
-            </ul>
-            <h4>b)Soft Skills</h4>
-                <ul>
-                <li>
-                    Collaborative problem solving; Worked effectively in team projects
-                    to debug code and find solutions
-                </li>
-                <br>
-                <li>
-                    Adaptive Learning;Quickly mastered new tools and frameworks for 
-                    different course requirements
-                </li>
-                <br>
-                <li>
-                    Technical Communication; Able to explain technical concepts to 
-                    non-technical classmates
-                </li>
-                <br>
-                <li>
-                    Time Management; Worked effectively,balanced multiple programming
-                    projects and coursework deadlines successfully
-                </li>
-            </ul>
-        </section>
-        <section class="vision">
-            <h3>4.<u>Vision & Goals</u></h3>
-            <p>
-                My vision is to use my technical expertise to create innovative 
-                solutions that contribute to national development. I aim to 
-                bridge the gap between talent and impact by building projects 
-                that address real-world challenges
-            </p>
-        </section>
-        <section class="personal">
-            <p>
-                Outside of academics, I enjoy exploring new ideas, collaborating with 
-                peers, and staying inspired by innovation in technology. I believe in 
-                continuous growth and making a positive difference wherever I can
-            </p>
-        </section>
-    </body>
-</html>
+        <title>About - Itai Vera</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
     body {
         background-image: url("Images/annie-spratt-0ZPSX_mQ3xI-unsplash.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        background-attachment: fixed;
         margin: 0;                      
         font-family: Arial, sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
-    .aboutMe{
-        justify-self: center;
-        max-width: 500px;
-        margin: 3px;
-        padding: 3px;
+    
+    /* Add overlay for better readability */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        z-index: -1;
     }
-    .myJourney{
-        justify-self: center;
-        max-width: 500px;
-        margin: 3px;
-        padding: 3px;
+    
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        background-color: #0A1F44;  /* Semi-transparent white */
+        backdrop-filter: blur(5px);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .skills{
-        justify-self: center;
-        max-width: 500px;
-        margin: 3px;
-        padding: 3px;
+    
+    .logo {
+        font-size: 24px;
+        color: white;  /* Dark blue for contrast */
+        font-weight: bold;
     }
-    .divIcons{
+    
+    .navigationBar {
+        display: flex;
+        gap: 30px;
+    }
+    
+    .navigationBar a {
+        text-decoration: none;
+        font-size: 18px;
+        color: white;  /* Dark blue for contrast */
+        transition: color 0.3s ease;
+        padding: 5px 10px;
+    }
+    
+    .navigationBar a:hover {
+        color: orangered;
+    }
+    
+    .navigationBar a.active {
+        color: orangered;
+        border-bottom: 2px solid orangered;
+    }
+    
+    main {
+        flex: 1;
+        padding: 20px;
+    }
+    
+    .content-section {
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(3px);
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    h3 {
+        color: #0A1F44;  /* Changed from white to dark blue for readability */
+        margin-top: 0;
+    }
+    
+    h4 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    .skills-list, .soft-skills {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    
+    .skills-list li {
+        margin-bottom: 15px;
+    }
+    
+    .skill-item {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .divIcons {
         border-radius: 50%;
         height: 40px;
         width: 40px;
+        object-fit: cover;
+        background-color: white;
+        padding: 5px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Added subtle shadow */
     }
-    .vision{
-        justify-self: center;
-        max-width: 500px;
-        margin: 3px;
-        padding: 3px;
+    
+    .soft-skills li {
+        margin-bottom: 15px;
+        padding-left: 20px;
+        position: relative;
     }
-    .personal{
-        justify-self: center;
-        max-width: 500px;
-        margin: 3px;
-        padding: 3px;
+    
+    .soft-skills li::before {
+        content: "•";
+        color: orangered;
+        font-weight: bold;
+        position: absolute;
+        left: 0;
     }
+    
+    hr {
+        border: none;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        margin: 10px 0;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(5px);
+        margin-top: 40px;
+        color: #0A1F44;  /* Added consistent color */
+    }
+    
+    /* Responsive design */
+    @media (max-width: 768px) {
+        header {
+            flex-direction: column;
+            gap: 15px;
+            padding: 15px;
+        }
+        
+        .navigationBar {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .navigationBar a {
+            font-size: 16px;  /* Slightly smaller on mobile */
+        }
+        
+        .content-section {
+            margin: 10px;
+            padding: 15px;
+        }
+    }
+
+    /* Add a subtle hover effect to sections */
+    .content-section:hover {
+        background-color: rgba(255, 255, 255, 0.8);
+        transition: background-color 0.3s ease;
+    }
+    
 </style>
+    </head>
+    <body>
+        <header>
+            <span class="logo"><b>Itai Vera</b></span>
+            <nav class="navigationBar">
+                <div class="box">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="box">
+                    <a href="About.html" class="active">About</a>
+                </div>
+                <div class="box">
+                    <a href="Skills.html">Skills</a>
+                </div>
+                <div class="box">
+                    <a href="Projects.html">Projects</a>
+                </div>
+                <div class="box">
+                    <a href="Contact.html">Contact</a>
+                </div>  
+            </nav>
+        </header>
+        
+        <main>
+            <section class="aboutMe content-section">
+                <h3>1.<u>Introduction</u></h3>
+                <p>
+                    I’m Itai Vera, a second-year Information Technology student at 
+                    Lupane State University in Matebeleland North, Zimbabwe. I’m 
+                    fascinated by how tech shapes everyday life, from the apps 
+                    we use to the systems that keep the world connected. I enjoy 
+                    exploring new ideas, building solutions, and pushing myself to 
+                    stay ahead in a fast-changing digital world.
+                </p>
+            </section>
+            
+            <section class="myJourney content-section">
+                <h3>2.<u>Background & Journey</u></h3>
+                <p>
+                    My journey into IT began with a curiosity about how systems 
+                    work and how digital solutions can solve everyday problems.
+                    Over time, I've developed skills in programming, networking,
+                    and system design, and I continue to explore new technologies
+                    to expand my knowledge.
+                </p>
+            </section>
+            
+            <section class="skills content-section">
+                <h3>3.<u>Skills & strengths</u></h3>
+                <h4>a) Technical Skills</h4>
+                <ul class="skills-list">
+                    <li>
+                        <div class="skill-item">
+                            <img src="Icons/java.png" class="divIcons" alt="Java icon"> 
+                            <span><strong>Java (Familiar):</strong> Object-oriented concepts and basic application development</span>
+                        </div>
+                    </li>
+                    <hr>
+                    <li>
+                        <div class="skill-item">
+                            <img src="Icons/python.png" class="divIcons" alt="Python icon"> 
+                            <span><strong>Python (Beginner):</strong> A new versatile language that I'm adding to my skills set</span>
+                        </div>
+                    </li>
+                    <hr>
+                    <li>
+                        <div class="skill-item">
+                            <img src="Icons/html-5.png" class="divIcons" alt="HTML icon"> 
+                            <span><strong>HTML/CSS (Familiar):</strong> Building responsive webpages and this portfolio</span>
+                        </div>
+                    </li>
+                    <hr>
+                    <li>
+                        <div class="skill-item">
+                            <img src="Icons/mysql.png" class="divIcons" alt="MySQL icon"> 
+                            <span><strong>MySQL (Familiar):</strong> Designed and queried databases for university assignments</span>
+                        </div>
+                    </li>
+                </ul>
+                
+                <h4>b) Soft Skills</h4>
+                <ul class="soft-skills">
+                    <li>Collaborative problem solving; Worked effectively in team projects to debug code and find solutions</li>
+                    <li>Adaptive Learning; Quickly mastered new tools and frameworks for different course requirements</li>
+                    <li>Technical Communication; Able to explain technical concepts to non-technical classmates</li>
+                    <li>Time Management; Balanced multiple programming projects and coursework deadlines successfully</li>
+                </ul>
+            </section>
+            
+            <section class="vision content-section">
+                <h3>4.<u>Vision & Goals</u></h3>
+                <p>
+                    My vision is to use my technical expertise to create innovative 
+                    solutions that contribute to national development. I aim to 
+                    bridge the gap between talent and impact by building projects 
+                    that address real-world challenges.
+                </p>
+            </section>
+            
+            <section class="personal content-section">
+                <p>
+                    Outside of academics, I enjoy exploring new ideas, collaborating with 
+                    peers, and staying inspired by innovation in technology. I believe in 
+                    continuous growth and making a positive difference wherever I can.
+                </p>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Itai Vera. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
